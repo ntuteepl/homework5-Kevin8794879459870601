@@ -1,23 +1,29 @@
 #include <stdio.h>
 
 int main() {
-    float a, b;
-    scanf("%f%f",&a,&b);
-    if ((a*30+b/2)>b*6){
-            float c;
-            c=(a*30+b/2)-b*6;
-            if (c>180){c=c-180;}
+    int a, b;
+    scanf("%d%d",&a,&b);
+    float c,d,e;
+    d=a;
+    e=b;
+    c=(d*30+e/2)-e*6;
+    if (c<0){
+         c=-c;
+
         printf("%.3f\n",c);
 
     }
-    else if ((a*30+b/2)<b*6){
-            float c;
-            c=b*6-(a*30+b/2);
-            if (c>180){c=c-180;}
+    else if (c>180){
+            c=360-c;
+
         printf("%.3f\n",c);
     }
+    else  {
+
+        printf("%.3f\n",c);
+    }
+
 
 
     return 0;
 }
-
